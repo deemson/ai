@@ -1,0 +1,10 @@
+[private]
+default:
+    @just --list
+
+install-grill-me:
+	mkdir -p $HOME/.claude/skills $HOME/.codex/skills
+	rm -rf $HOME/.claude/skills/grill-me $HOME/.codex/skills/grill-me
+	cp -R "{{ source_directory() }}/grill-me" $HOME/.claude/skills/grill-me
+	cp -R "{{ source_directory() }}/grill-me" $HOME/.codex/skills/grill-me
+
