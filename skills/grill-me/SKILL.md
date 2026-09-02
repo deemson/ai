@@ -57,7 +57,7 @@ Free text: pushback, missing context, branches the questions missed, questions o
 
 A question built on a wrong fact is a wasted question, and its recommendation steers the design wrong quietly. So settle what's true before the first question exists.
 
-1. **Explore.** Dispatch sub-agents for everything the environment can answer — filesystem, tools, the codebase. Done when you can state the situation rather than guess at it.
+1. **Explore.** Investigate everything the environment can answer — filesystem, tools, the codebase — using the tools available. When independent investigations are substantial and delegation is available, run them in parallel; otherwise investigate directly. Done when you can state the situation from evidence rather than guess at it.
 
 2. **Write the facts.** Create the file with its restatement and its `## Facts` list. A claim earns a bullet only if a question or recommendation in this session would change had it been false; give its source where that isn't obvious. Keep the restatement of intent above the list and separate from it — the facts are verified, the restatement is inferred, and the inferred one is where the expensive mistakes live. When little in the environment constrains the plan, say that outright and list what you're assuming instead; never skip this phase because the situation looks simple to you, since a situation you've misjudged as simple is exactly where a wrong fact hides. Done when every bullet is load-bearing and the list is short enough to actually be read.
 
@@ -69,7 +69,7 @@ Only then write Round 1.
 
 ## Each round
 
-1. **Find the facts.** Facts are yours to find; decisions are the user's to make. The up-front phase covered what was reachable then, so this step is for facts a decision has since unlocked — the schema worth reading now that they've chosen the database. Dispatch a sub-agent for those, and append what comes back to the `## Facts` section tagged with this round, never buried inline in the question that wanted it. A running exploration is an unsettled prerequisite: only the questions downstream of it wait for the report, so put the rest of the frontier in this round. Done when every remaining frontier question is one only the user can answer.
+1. **Find the facts.** Facts are yours to find; decisions are the user's to make. The up-front phase covered what was reachable then, so this step is for facts a decision has since unlocked — the schema worth reading now that they've chosen the database. Verify those facts using the tools available, parallelizing independent checks when useful and supported, and append the findings to the `## Facts` section tagged with this round, never buried inline in the question that wanted them. An investigation still in progress is an unsettled prerequisite: only the questions downstream of it wait for the result, so put the rest of the frontier in this round. Done when every remaining frontier question is one only the user can answer.
 
 2. **Write the round.** Append `## Round N` to the file, holding the whole frontier ranked most-consequential-first, in the template's format. Every question is one idea, carries your recommended answer, and ends in an empty stub. Close the round with its `### Notes` block. Done when every frontier question sits in the file with a recommendation and a stub.
 
