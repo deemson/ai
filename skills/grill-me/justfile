@@ -1,0 +1,19 @@
+[private]
+default:
+    @just --list
+
+claude:
+    rm -rf $HOME/.claude/skills/grill-me
+    mkdir -p $HOME/.claude/skills/grill-me
+    cp "{{ source_directory() }}/SKILL.md" $HOME/.claude/skills/grill-me
+
+codex:
+    rm -rf $HOME/.codex/skills/grill-me
+    mkdir -p $HOME/.codex/skills/grill-me
+    cp -R "{{ source_directory() }}/agents" $HOME/.codex/skills/grill-me
+    cp "{{ source_directory() }}/SKILL.md" $HOME/.codex/skills/grill-me
+
+pi:
+    rm -rf $HOME/.pi/agent/skills/grill-me
+    mkdir -p $HOME/.pi/agent/skills/grill-me
+    cp "{{ source_directory() }}/SKILL.md" $HOME/.pi/agent/skills/grill-me
