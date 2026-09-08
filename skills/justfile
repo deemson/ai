@@ -1,5 +1,0 @@
-mod grill-me
-
-[private]
-default:
-    @just --list
