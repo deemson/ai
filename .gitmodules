@@ -1,3 +1,6 @@
 [submodule "matt-pocock-skills"]
 	path = vendor/matt-pocock-skills
 	url = https://github.com/mattpocock/skills.git
+[submodule "vendor/humanlayer-skills"]
+	path = vendor/humanlayer-skills
+	url = https://github.com/humanlayer/skills.git
